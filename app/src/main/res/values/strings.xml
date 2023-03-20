@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Ramdan Challenge</string>
+    <string name="ramadan_karem">Ramadan Karem</string>
+    <string name="arabic_text">زكاتك بركة حياتك</string>
+    <string name="hello_ramdan">اهلا رمضان</string>
+    <string name="swipe">اسحب لنتعلم</string>
+    <string name="tips">أفضل اعمال الخير في رمضان</string>
+    <string name="_1">1. الصدقة</string>
+    <string name="_2">2.إطعام المساكين</string>
+    <string name="_3">3.تفطير الصائمين</string>
+    <string name="_4">4.تعليم الأطفال سيرة النبي الكريم</string>
+    <string name="_5">5.التطوع</string>
+    <string name="_6">6.نشر الابتسامة وتجنب قول السوء</string>
+    <string name="first_tip">1. الصدقة</string>
+    <string name="second_tip">2. إطعام المساكين</string>
+    <string name="third_tip">3. تفطير الصائمين</string>
+    <string name="fourth_tip">4. تعليم الأطفال سيرة النبي الكريم</string>
+    <string name="fifth_tip">5. التطوع</string>
+    <string name="six_tip">6. نشر الابتسامة وتجنب قول السوء</string>
+</resources>

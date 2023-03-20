@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/tools">
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/ahln_ramadan"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp" />
+        <Constraint
+            android:id="@+id/aftar_ramdan"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/swipe"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/ramdan_tips"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:alpha="0.0"
+            android:layout_marginTop="24dp" />
+        <Constraint
+            android:id="@+id/muslim_life"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.209"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:alpha="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/list_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/muslim_life"
+            android:alpha="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/ramdan_tips"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:alpha="1.0"
+            android:layout_marginTop="24dp" />
+
+        <Constraint
+            android:id="@+id/muslim_life"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.209"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/list_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/muslim_life"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/ahln_ramadan"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:alpha="0.0"/>
+        <Constraint
+            android:id="@+id/aftar_ramdan"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:alpha="0.0"/>
+        <Constraint
+            android:id="@+id/swipe"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:alpha="0.0"/>
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="3000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/swipe"
+            motion:touchAnchorSide="bottom"
+            />
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="25"
+                app:motionTarget="@+id/swipe"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6"
+                />
+            <KeyPosition
+                app:framePosition="50"
+                app:motionTarget="@+id/swipe"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.5"
+                />
+            <KeyPosition
+                app:framePosition="75"
+                app:motionTarget="@+id/swipe"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6"
+                />
+
+            <KeyPosition
+                app:framePosition="50"
+                app:motionTarget="@+id/ahln_ramadan"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.5"
+                />
+            <KeyPosition
+                app:framePosition="75"
+                app:motionTarget="@+id/ahln_ramadan"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.4"
+                />
+            <KeyPosition
+                app:framePosition="100"
+                app:motionTarget="@+id/ahln_ramadan"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.10"
+                />
+
+            <KeyPosition
+            app:framePosition="25"
+            app:motionTarget="@+id/aftar_ramdan"
+            app:keyPositionType="parentRelative"
+            app:percentY="-0.6"
+            />
+            <KeyPosition
+                app:framePosition="50"
+                app:motionTarget="@+id/aftar_ramdan"
+                app:keyPositionType="parentRelative"
+                app:percentY="-0.5"
+                />
+            <KeyAttribute
+                app:framePosition="25"
+                app:motionTarget="@+id/list_item"
+                android:alpha=".2"/>
+
+            <KeyAttribute
+                app:framePosition="50"
+                app:motionTarget="@+id/list_item"
+                android:alpha=".4"/>
+
+            <KeyAttribute
+                app:framePosition="70"
+                app:motionTarget="@+id/list_item"
+                android:alpha=".6"/>
+
+            <KeyAttribute
+                app:framePosition="100"
+                app:motionTarget="@+id/ramdan_tips"
+                android:alpha="1"/>
+
+            <KeyAttribute
+                app:framePosition="80"
+                app:motionTarget="@+id/ramdan_tips"
+                android:alpha=".5"/>
+
+            <KeyAttribute
+                app:framePosition="20"
+                app:motionTarget="@+id/ramdan_tips"
+                android:alpha=".3"/>
+
+        </KeyFrameSet>
+
+    </Transition>
+
+</MotionScene>
